@@ -9,6 +9,7 @@ function App() {
   const[currentUser, setCurrentUser] = useState(null)
   const[repos, setRepos] = useState(null)
 
+  //busca do repositório Github.
   const handleSetData = async () => {
     const userData = await fetch(`https://api.github.com/users/${user}`);
     const newUser = await userData.json();
